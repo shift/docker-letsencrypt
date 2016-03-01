@@ -7,16 +7,16 @@ Cucumber::Rake::Task.new(:features) do |t|
 end
 
 task :build do
-  sh "docker build -t shift/mosquitto ."
+  sh "docker build -t shift/letsencrypt ."
 end
 
 task :audit do
-  sh "docker run -it shift/mosquitto apk audit"
-  sh "docker run -it shift/mosquitto apk stats"
+  sh "docker run -it shift/letsencrypt apk audit"
+  sh "docker run -it shift/letsencrypt apk stats"
 end
 
 task :test do
-  sh "docker run -d -it --rm shift/mosquitto mosquitto -c /etc/mosquitto/mosquitto.test.conf"
+  sh "docker run -d -it --rm shift/letsencrypt letsencrypt -c /etc/letsencrypt/letsencrypt.test.conf"
   sh ""
 end
 
