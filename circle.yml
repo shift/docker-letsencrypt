@@ -1,7 +1,6 @@
 machine:
   services:
     - docker
-    - redis
   pre:
     - git config --global user.email "automation@tickli.sh"
     - git config --global user.name "CircleCI"
