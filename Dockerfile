@@ -1,4 +1,4 @@
-FROM armbuild/alpine:3.3
+FROM alpine:3.3
 
 MAINTAINER Vincent Palmer <shift@someone.section.me>
 
